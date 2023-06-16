@@ -1,0 +1,26 @@
+const yesButton = document.getElementById('yesButton');
+const noButton = document.getElementById('noButton');
+
+noButton.addEventListener('mouseover', () => {
+    const container = document.querySelector('.options');
+    const buttons = container.querySelectorAll('button');
+
+    const randomIndex = Math.floor(Math.random() * buttons.length);
+    const temp = buttons[randomIndex];
+
+    container.insertBefore(temp, buttons[0]);
+});
+
+noButton.addEventListener('click', () => {
+    const container = document.querySelector('.options');
+    const buttons = container.querySelectorAll('button');
+
+    const randomIndex = Math.floor(Math.random() * buttons.length);
+    const temp = buttons[randomIndex];
+
+    container.insertBefore(temp, buttons[0]);
+});
+
+yesButton.addEventListener('click', () => {
+    window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+});
